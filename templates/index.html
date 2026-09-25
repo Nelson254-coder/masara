@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>FluentAI Academy</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="container navigation">
+                <a href="#home" class="logo">
+                    Fluent<span>AI</span> Academy
+                </a>
+
+                <nav>
+                    <a href="#programs">Programs</a>
+                    <a href="#capabilities">Capabilities</a>
+                    <a href="#limitations">Limitations</a>
+                    <a href="#assessment">Assessment</a>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="hero" id="home">
+                <div class="container hero-content">
+                    <p class="eyebrow">
+                        Practical AI education for business
+                    </p>
+
+                    <h1>
+                        Move your workforce from AI curious to
+                        <span>AI fluent.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        We help organisations understand AI's capabilities,
+                        recognise its limitations and embrace it safely,
+                        confidently and productively.
+                    </p>
+
+                </div>
+            </section>
+            <section class="section" id="programs">
+                <div class="container">
+                    <p class="eyebrow">Corporate training</p>
+                    <h2>Programs for the whole organisation</h2>
+
+                    <div class="card-grid">
+                        <article class="card">
+                            <div class="card-icon">01</div>
+
+                            <h3>AI Fluency Foundations</h3>
+
+                            <p>
+                                Understand generative AI, key terminology,
+                                prompting techniques and responsible use.
+                            </p>
+
+                            <strong>Recommended for all employees</strong>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-icon">02</div>
+
+                            <h3>AI Risk and Trust</h3>
+
+                            <p>
+                                Learn about hallucinations, bias, privacy,
+                                security, verification and human oversight.
+                            </p>
+                            <strong>Recommended for leaders and risk teams</strong>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-icon">03</div>
+                            <h3>AI at Work</h3>
+
+                            <p>
+                                Identify practical use cases and redesign business workflows using AI responsibly.
+                            </p>
+
+                            <strong>Recommended for functional teams</strong>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section light-section" id="capabilities">
+                <div class="container">
+                    <p class="eyebrow">AI capabilities</p>
+
+                    <h2>What AI can help your company accomplish</h2>
+
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3>Create and communicate</h3>
+
+                            <p>
+                                Draft, summarise, translate and adapt documents and communications.
+                            </p>
+                        </article>
+
+                        <article class="card">
+                            <h3>Analyse and discover</h3>
+
+                            <p>
+                                Compare information, identify patterns and support evidence-based decisions
+                            </p>
+                        </article>
+
+                        <article class="card">
+
+                            <h3>Automate and assist</h3>
+                            <p>
+                                Reduce repetitive work and support employees as they completed everyday tasks.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section dark-section" id="limitations">
+                <div class="container">
+                    <p class="eyebrow">Responsible AI</p>
+
+                    <h2>Understanding AI's limitations</h2>
+
+                    <p class="section-introduction">
+                        AI can support human judgement, but people remain
+                        responsible for decisions and outcomes.
+                    </p>
+
+                    <div class="limitations-grid">
+                        <div class="limitation">
+                            <span>!</span>
+
+                            <p>
+                                AI can produce convincing but incorrect information.
+                            </p>
+                        </div>
+
+                        <div class="limitation">
+                            <span>!</span>
+
+                            <p>
+                                AI output may contain bias inherited from data or instructions.
+                            </p>
+                        </div>
+
+                        <div class="limitation">
+                            <span>!</span>
+
+                            <p>
+                                Confidential company information should not be
+                                entered into unapproved systems.
+                            </p>
+                        </div>
+                        <div class="limitation">
+                            <span>!</span>
+
+                            <p>
+                                Important outputs require verification and
+                                appropriate human oversight.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="assessment">
+                <div class="container assessment-container">
+                    <div>
+                        <p class="eyebrow">AI fluency assessment</p>
+
+                        <h2>Where is your organization today?</h2>
+
+                        <p class="section-introduction">
+                            Select the statement that best represents your
+                            organisation's current level of AI adoption.
+                        </p>
+                    </div>
+
+                    <form id="aiAssessmentForm">
+                        <label class="assessment-option survey-option">
+                            <input type="radio" name="ai_maturity" value="1" required>
+                            We are beginning to explore AI.
+                        </label>
+
+                        <label class="assessment-option survey-option">
+                            <input type="radio" name="ai_maturity" value="2">
+                            A few employees experiment with AI tools.
+                        </label>
+
+                        <label class="assessment-option survey-option">
+                            <input type="radio" name="ai_maturity" value="3">
+                            Some teams use AI, but practices are inconsistent.
+                        </label>
+
+                        <label class="assessment-option survey-option">
+                            <input type="radio" name="ai_maturity" value="4">
+                            We have approved use cases and internal guidance.
+                        </label>
+
+                        <label class="assessment-option survey-option">
+                            <input type="radio" name="ai_maturity" value="5">
+                            We measure and govern AI adoption across the company.
+                        </label>
+
+                        <p id="formMessage" class="form-message"></p>
+
+                        <button
+                            class="primary-button form-button"
+                            type="button"
+                            id="recommendationButton"
+                            disabled
+                        >
+                            Get recommendation
+                        </button>
+                    </form>
+
+                    <div class="result-card" id="resultPanel" hidden>
+                        <p class="result-label">
+                            RECOMMENDED STARTING POINT
+                        </p>
+
+                        <h3 id="resultGrade"></h3>
+
+                        <p>Score: <strong id="resultScore"></strong></p>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-fill"
+                                id="progressBar"
+                                role="progressbar"
+                                aria-valuenow="0"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            ></div>
+                        </div>
+
+                        <p id="resultSummary"></p>
+
+                        <ul id="recommendationList" class="recommendation-list"></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container footer-content">
+                <strong>FluentAI Academy</strong>
+
+                <p>
+                    Practical AI education for responsible organisations.
+                </p>
+
+                <p>&copy; 2026 FluentAI Academy</p>
+
+            </div>
+        </footer>
+
+        <script src="{{ url_for('static', filename='survey.js') }}"></script>
+    </body>
+
+</html>
