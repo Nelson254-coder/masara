@@ -37,9 +37,8 @@ def grade_survey():
             "the fundamentals before scaling adoption."
         )
         recommendations = [
-            "AI Fluency Foundations: core concepts and terminology",
-            "Prompting basics and everyday use cases",
-            "Responsible-use essentials and company guidelines",
+            "AI Fluency Foundations: core concepts, terminology and prompting basics",
+            "AI Risk and Trust: responsible-use essentials and company guidelines",
         ]
 
     elif score <= 4:
@@ -50,8 +49,8 @@ def grade_survey():
         )
         recommendations = [
             "AI at Work: practical workflows for functional teams",
-            "Output verification and quality checks",
-            "Team guidelines for responsible adoption",
+            "AI Risk and Trust: output verification and quality checks",
+            "AI Fluency Foundations: a shared baseline for every team",
         ]
 
     else:
@@ -61,9 +60,8 @@ def grade_survey():
             "governance and measuring impact."
         )
         recommendations = [
-            "AI Leadership and Governance program",
-            "AI champions and risk controls",
-            "Performance measurement and organisation-wide scaling",
+            "AI Risk and Trust: governance, risk controls and human oversight",
+            "AI at Work: Redesigning workflows to scale what works",
         ]
 
     return jsonify(

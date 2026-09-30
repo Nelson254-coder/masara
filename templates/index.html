@@ -8,6 +8,8 @@
 
         <title>FluentAI Academy</title>
 
+        <meta name="description" content="Practical AI training for organisations: understand what AI can do, recognise its limits and use it safely and productively.">
+
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
 
@@ -18,7 +20,20 @@
                     Fluent<span>AI</span> Academy
                 </a>
 
-                <nav>
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    id="menuToggle"
+                    aria-expanded="false"
+                    aria-controls="siteNav"
+                    aria-label="Toggle menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>  
+                </button>
+
+                <nav id="siteNav">
                     <a href="#programs">Programs</a>
                     <a href="#capabilities">Capabilities</a>
                     <a href="#limitations">Limitations</a>
@@ -45,6 +60,9 @@
                         confidently and productively.
                     </p>
 
+                    <a class="primary-button" href="#assessment">
+                        Take the free assessment
+                    </a>
                 </div>
             </section>
             <section class="section" id="programs">
@@ -111,7 +129,7 @@
                             <h3>Analyse and discover</h3>
 
                             <p>
-                                Compare information, identify patterns and support evidence-based decisions
+                                Compare information, identify patterns and support evidence-based decisions.
                             </p>
                         </article>
 
@@ -119,7 +137,7 @@
 
                             <h3>Automate and assist</h3>
                             <p>
-                                Reduce repetitive work and support employees as they completed everyday tasks.
+                                Reduce repetitive work and support employees as they complete everyday tasks.
                             </p>
                         </article>
                     </div>
@@ -179,7 +197,7 @@
                     <div>
                         <p class="eyebrow">AI fluency assessment</p>
 
-                        <h2>Where is your organization today?</h2>
+                        <h2>Where is your organisation today?</h2>
 
                         <p class="section-introduction">
                             Select the statement that best represents your
@@ -227,10 +245,10 @@
 
                     <div class="result-card" id="resultPanel" hidden>
                         <p class="result-label">
-                            RECOMMENDED STARTING POINT
+                            YOUR RECOMMENDED STARTING POINT
                         </p>
 
-                        <h3 id="resultGrade"></h3>
+                        <h3 id="resultLevel"></h3>
 
                         <p>Score: <strong id="resultScore"></strong></p>
 
@@ -248,6 +266,10 @@
                         <p id="resultSummary"></p>
 
                         <ul id="recommendationList" class="recommendation-list"></ul>
+
+                        <a class="primary-button result-button" id="requestTraining" href="#">
+                            Request training
+                        </a>
                     </div>
                 </div>
             </section>
@@ -261,7 +283,11 @@
                     Practical AI education for responsible organisations.
                 </p>
 
-                <p>&copy; 2026 FluentAI Academy</p>
+                <p>
+                    <a class="footer-link" href="{{ url_for('contact') }}">Contact us</a>
+                    &nbsp;&middot;&nbsp;
+                    &copy; 2026 FluentAI Academy
+                </p>
 
             </div>
         </footer>
