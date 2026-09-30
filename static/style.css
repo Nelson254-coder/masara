@@ -469,3 +469,30 @@ footer {
 
 }
 }
+.contact-container {
+    max-width: 850px;
+}
+
+.contact-list {
+    display: grid;
+    gap: 16px;
+    margin-top: 35px;
+}
+
+.contact-card {
+    padding: 22px 26px;
+}
+
+.contact-card p {
+    margin: 6px 0 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
