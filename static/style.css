@@ -400,6 +400,9 @@ footer {
     nav {
         display: none;
     }
+    nav.open {
+        display: flex;
+    }
     
     @media (max-width: 800px) {
     .menu-toggle {
